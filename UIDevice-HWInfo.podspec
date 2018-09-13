@@ -8,5 +8,5 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/sanctor/UIDevice-HWInfo.git', :tag => s.version.to_s }
   s.source_files = 'UIDevice-Hardware.{h,m}'
   s.requires_arc = true
-  s.frameworks = 'UIKit'
+  s.platform = :ios
 end
