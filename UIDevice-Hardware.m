@@ -74,6 +74,10 @@
     if ([modelIdentifier isEqualToString:@"iPhone10,5"])   return @"iPhone 8 Plus";     // AT&T, Global
     if ([modelIdentifier isEqualToString:@"iPhone10,6"])   return @"iPhone X";          // AT&T, Global
 
+    if ([modelIdentifier isEqualToString:@"iPhone11,2"])   return @"iPhone Xs";
+    if ([modelIdentifier isEqualToString:@"iPhone11,4"])   return @"iPhone Xs Max";
+    if ([modelIdentifier isEqualToString:@"iPhone11,8"])   return @"iPhone Xr";
+    
     // iPad http://theiphonewiki.com/wiki/IPad
 
     if ([modelIdentifier isEqualToString:@"iPad1,1"])      return @"iPad 1G";
@@ -120,6 +124,9 @@
     if ([modelIdentifier isEqualToString:@"iPad 7,3"])     return @"iPad Pro (10.5 inch) 1G (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad 7,4"])     return @"iPad Pro (10.5 inch) 1G (Cellular)";
 
+    if ([modelIdentifier isEqualToString:@"iPad 7,5"])     return @"iPad 6 (WiFi)";
+    if ([modelIdentifier isEqualToString:@"iPad 7,6"])     return @"iPad 6 (WiFi/Cellular)";
+    
     // iPod http://theiphonewiki.com/wiki/IPod
 
     if ([modelIdentifier isEqualToString:@"iPod1,1"])      return @"iPod touch 1G";

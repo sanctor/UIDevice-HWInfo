@@ -27,6 +27,9 @@ typedef NS_ENUM(NSUInteger, UIDeviceFamily) {
  Returns a human-readable model name in the format of "iPhone 4S". Fallback of the the `modelIdentifier` value.
  */
 - (NSString *)modelName;
+#if DEBUG
+- (NSString *)modelNameForModelIdentifier:(NSString *)modelIdentifier;
+#endif
 
 /**
  Returns the device family as a `UIDeviceFamily`
