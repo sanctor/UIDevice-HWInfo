@@ -76,6 +76,7 @@
 
     if ([modelIdentifier isEqualToString:@"iPhone11,2"])   return @"iPhone XS";
     if ([modelIdentifier isEqualToString:@"iPhone11,4"])   return @"iPhone XS Max";
+    if ([modelIdentifier isEqualToString:@"iPhone11,6"])   return @"iPhone XS Max";
     if ([modelIdentifier isEqualToString:@"iPhone11,8"])   return @"iPhone XR";
     
     // iPad http://theiphonewiki.com/wiki/IPad
@@ -119,13 +120,18 @@
     if ([modelIdentifier isEqualToString:@"iPad6,4"])      return @"iPad Pro (9.7 inch) 1G (Cellular)"; // http://pdadb.net/index.php?m=specs&id=9981&c=apple_ipad_pro_9.7-inch_a1675_td-lte_32gb_apple_ipad_6,4
     if ([modelIdentifier isEqualToString:@"iPad6,7"])      return @"iPad Pro (12.9 inch) 1G (Wi-Fi)"; // http://pdadb.net/index.php?m=specs&id=8960&c=apple_ipad_pro_wifi_a1584_128gb
     if ([modelIdentifier isEqualToString:@"iPad6,8"])      return @"iPad Pro (12.9 inch) 1G (Cellular)"; // http://pdadb.net/index.php?m=specs&id=8965&c=apple_ipad_pro_td-lte_a1652_32gb_apple_ipad_6,8
-    if ([modelIdentifier isEqualToString:@"iPad 7,1"])     return @"iPad Pro (12.9 inch) 2G (Wi-Fi)";
-    if ([modelIdentifier isEqualToString:@"iPad 7,2"])     return @"iPad Pro (12.9 inch) 2G (Cellular)";
-    if ([modelIdentifier isEqualToString:@"iPad 7,3"])     return @"iPad Pro (10.5 inch) 1G (Wi-Fi)";
-    if ([modelIdentifier isEqualToString:@"iPad 7,4"])     return @"iPad Pro (10.5 inch) 1G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad7,1"])     return @"iPad Pro (12.9 inch) 2G (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad7,2"])     return @"iPad Pro (12.9 inch) 2G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad7,3"])     return @"iPad Pro (10.5 inch) 1G (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad7,4"])     return @"iPad Pro (10.5 inch) 1G (Cellular)";
 
-    if ([modelIdentifier isEqualToString:@"iPad 7,5"])     return @"iPad 6 (WiFi)";
-    if ([modelIdentifier isEqualToString:@"iPad 7,6"])     return @"iPad 6 (WiFi/Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad7,5"])     return @"iPad 6 (WiFi)";
+    if ([modelIdentifier isEqualToString:@"iPad7,6"])     return @"iPad 6 (WiFi/Cellular)";
+    
+    if ([modelIdentifier isEqualToString:@"iPad8,1"])     return @"iPad Pro (11 inch) 1G (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad8,1"])     return @"iPad Pro (11 inch) 1G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad8,5"])     return @"iPad Pro (12.9 inch) 3G (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad8,6"])     return @"iPad Pro (12.9 inch) 3G (Cellular)";
     
     // iPod http://theiphonewiki.com/wiki/IPod
 
@@ -147,8 +153,8 @@
     // Simulator
     if ([modelIdentifier hasSuffix:@"86"] || [modelIdentifier isEqual:@"x86_64"])
     {
-        BOOL smallerScreen = ([[UIScreen mainScreen] bounds].size.width < 768.0);
-        return (smallerScreen ? @"iPhone Simulator" : @"iPad Simulator");
+        NSString *simulatorModel = @(getenv("SIMULATOR_MODEL_IDENTIFIER"));
+        return [self modelNameForModelIdentifier:simulatorModel];
     }
 
     return modelIdentifier;
