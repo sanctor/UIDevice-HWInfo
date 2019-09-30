@@ -76,8 +76,15 @@
 
     if ([modelIdentifier isEqualToString:@"iPhone11,2"])   return @"iPhone XS";
     if ([modelIdentifier isEqualToString:@"iPhone11,4"])   return @"iPhone XS Max";
-    if ([modelIdentifier isEqualToString:@"iPhone11,6"])   return @"iPhone XS Max";
+    if ([modelIdentifier isEqualToString:@"iPhone11,6"])   return @"iPhone XS Max (China)"; // China dual-sim
     if ([modelIdentifier isEqualToString:@"iPhone11,8"])   return @"iPhone XR";
+    
+    if ([modelIdentifier isEqualToString:@"iPhone12,1"])   return @"iPhone 11";
+    if ([modelIdentifier isEqualToString:@"iPhone12,2"])   return @"iPhone 11 (China)";
+    if ([modelIdentifier isEqualToString:@"iPhone12,3"])   return @"iPhone 11 Pro";
+    if ([modelIdentifier isEqualToString:@"iPhone12,4"])   return @"iPhone 11 Pro (China)";
+    if ([modelIdentifier isEqualToString:@"iPhone12,5"])   return @"iPhone 11 Pro Max";
+    if ([modelIdentifier isEqualToString:@"iPhone12,6"])   return @"iPhone 11 Pro Max (China)";
     
     // iPad http://theiphonewiki.com/wiki/IPad
 
@@ -94,11 +101,17 @@
     if ([modelIdentifier isEqualToString:@"iPad3,6"])      return @"iPad 4 (Global)";
     if ([modelIdentifier isEqualToString:@"iPad6,11"])     return @"iPad (5th gen) (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad6,12"])     return @"iPad (5th gen) (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad7,5"])      return @"iPad 6 (WiFi)";
+    if ([modelIdentifier isEqualToString:@"iPad7,6"])      return @"iPad 6 (WiFi/Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad7,11"])     return @"iPad 7 (WiFi)";
+    if ([modelIdentifier isEqualToString:@"iPad7,12"])     return @"iPad 7 (WiFi/Cellular)";
 
     if ([modelIdentifier isEqualToString:@"iPad4,1"])      return @"iPad Air (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad4,2"])      return @"iPad Air (Cellular)";
     if ([modelIdentifier isEqualToString:@"iPad5,3"])      return @"iPad Air 2 (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad5,4"])      return @"iPad Air 2 (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad11,3"])      return @"iPad Air 3 (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad11,4"])      return @"iPad Air 3 (Cellular)";
 
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
 
@@ -113,6 +126,8 @@
     if ([modelIdentifier isEqualToString:@"iPad4,9"])      return @"iPad mini 3G (Cellular)";
     if ([modelIdentifier isEqualToString:@"iPad5,1"])      return @"iPad mini 4G (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad5,2"])      return @"iPad mini 4G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad11,1"])      return @"iPad mini 5 (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad11,2"])      return @"iPad mini 5 (Cellular)";
 
     // iPad Pro https://www.theiphonewiki.com/wiki/IPad_Pro
 
@@ -124,14 +139,16 @@
     if ([modelIdentifier isEqualToString:@"iPad7,2"])     return @"iPad Pro (12.9 inch) 2G (Cellular)";
     if ([modelIdentifier isEqualToString:@"iPad7,3"])     return @"iPad Pro (10.5 inch) 1G (Wi-Fi)";
     if ([modelIdentifier isEqualToString:@"iPad7,4"])     return @"iPad Pro (10.5 inch) 1G (Cellular)";
-
-    if ([modelIdentifier isEqualToString:@"iPad7,5"])     return @"iPad 6 (WiFi)";
-    if ([modelIdentifier isEqualToString:@"iPad7,6"])     return @"iPad 6 (WiFi/Cellular)";
     
     if ([modelIdentifier isEqualToString:@"iPad8,1"])     return @"iPad Pro (11 inch) 1G (Wi-Fi)";
-    if ([modelIdentifier isEqualToString:@"iPad8,1"])     return @"iPad Pro (11 inch) 1G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad8,2"])     return @"iPad Pro (11 inch) 1G (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad8,3"])     return @"iPad Pro (11 inch) 1G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad8,4"])     return @"iPad Pro (11 inch) 1G (Cellular)";
     if ([modelIdentifier isEqualToString:@"iPad8,5"])     return @"iPad Pro (12.9 inch) 3G (Wi-Fi)";
-    if ([modelIdentifier isEqualToString:@"iPad8,6"])     return @"iPad Pro (12.9 inch) 3G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad8,6"])     return @"iPad Pro (12.9 inch) 3G (Wi-Fi)";
+    if ([modelIdentifier isEqualToString:@"iPad8,7"])     return @"iPad Pro (12.9 inch) 3G (Cellular)";
+    if ([modelIdentifier isEqualToString:@"iPad8,8"])     return @"iPad Pro (12.9 inch) 3G (Cellular)"; // 6GB RAM version, up to 1TB disk
+
     
     // iPod http://theiphonewiki.com/wiki/IPod
 
