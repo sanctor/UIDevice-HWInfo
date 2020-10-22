@@ -87,6 +87,11 @@
     if ([modelIdentifier isEqualToString:@"iPhone12,6"])   return @"iPhone 11 Pro Max (China)";
     if ([modelIdentifier isEqualToString:@"iPhone12,8"])   return @"iPhone SE 2nd Gen";
     
+    if ([modelIdentifier isEqualToString:@"iPhone13,1"])   return @"iPhone 12 mini";
+    if ([modelIdentifier isEqualToString:@"iPhone13,2"])   return @"iPhone 12";
+    if ([modelIdentifier isEqualToString:@"iPhone13,3"])   return @"iPhone 12 Pro";
+    if ([modelIdentifier isEqualToString:@"iPhone13,4"])   return @"iPhone 12 Pro Max";
+    
     // iPad http://theiphonewiki.com/wiki/IPad
     // iPad Mini http://theiphonewiki.com/wiki/IPad_mini
     // iPad Pro https://www.theiphonewiki.com/wiki/IPad_Pro

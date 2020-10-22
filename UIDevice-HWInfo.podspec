@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = "UIDevice-HWInfo"
-  spec.version      = "0.1.15"
+  spec.version      = "0.1.16"
   spec.summary      = "Category on UIDevice to distinguish between platforms and provide human-readable device names e.g. 'iPhone 8 Plus'."
   spec.homepage     = "https://github.com/sanctor/UIDevice-HWInfo"
   spec.license      = { :type => 'BSD', :file => 'LICENSE' }
